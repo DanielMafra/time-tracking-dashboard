@@ -25,3 +25,12 @@ img {
   display: block;
   max-width: 100%;
 }
+
+body {
+  background-color: var(--neutral-very-dark-blue);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
