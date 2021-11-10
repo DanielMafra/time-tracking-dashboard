@@ -20,9 +20,9 @@ const Person = () => {
         </div>
       </div>
       <ul className={styles.personNav}>
-        <li className={defaultActive ? styles.active : (active === 'd' ? styles.active : false)} onClick={() => handleClick('d')}>Daily</li>
-        <li className={active === 'w' ? styles.active : false} onClick={() => handleClick('w')}>Weekly</li>
-        <li className={active === 'm' ? styles.active : false} onClick={() => handleClick('m')}>Monthly</li>
+        <li className={defaultActive ? styles.active : (active === 'd' ? styles.active : undefined)} onClick={() => handleClick('d')}>Daily</li>
+        <li className={active === 'w' ? styles.active : undefined} onClick={() => handleClick('w')}>Weekly</li>
+        <li className={active === 'm' ? styles.active : undefined} onClick={() => handleClick('m')}>Monthly</li>
       </ul>
     </div>
   );
