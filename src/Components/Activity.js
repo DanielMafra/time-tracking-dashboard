@@ -1,18 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { GlobalContext } from '../GlobalContext';
 import styles from './Activity.module.css';
 
-const Activity = () => {
+const Activity = ({ title, currentTime, previousTime }) => {
+  const { type } = useContext(GlobalContext);
+
   return (
-    <div className={`${styles.activity} ${styles.work}`}>
-      <img src="./Assets/icon-work.svg" alt="" />
+    <div className={`${styles.activity} ${styles[title.toLowerCase().replace(" ", "")]}`}>
+      <img src={`./Assets/icon-${title.toLowerCase().replace(" ", "-")}.svg`} alt="" />
       <div className={styles.activityContent}>
         <div className={styles.now}>
-          <span>Work</span>
-          <span>32hrs</span>
+          <span>{title}</span>
+          <span>{currentTime}{currentTime > 1 ? "hrs" : "hr"}</span>
         </div>
         <div className={styles.old}>
           <img src="./Assets/icon-ellipsis.svg" alt="Options" />
-          <span>Last Week - 36hrs</span>
+          <span>Last {type} - {previousTime}{previousTime > 1 ? "hrs" : "hr"}</span>
         </div>
       </div>
     </div>

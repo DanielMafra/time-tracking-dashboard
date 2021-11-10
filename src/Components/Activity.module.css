@@ -1,5 +1,7 @@
 .activity {
   position: relative;
+  border-radius: 12px;
+  padding-top: 48px;
 }
 
 .activity > img {
@@ -11,8 +13,26 @@
 
 .work {
   background-color: var(--primary-light-red-a);
-  border-radius: 12px;
-  padding-top: 48px;
+}
+
+.play {
+  background-color: var(--primary-soft-blue);
+}
+
+.study {
+  background-color: var(--primary-light-red-b);
+}
+
+.exercise {
+  background-color: var(--primary-lime-green);
+}
+
+.social {
+  background-color: var(--primary-violet);
+}
+
+.selfcare {
+  background-color: var(--primary-soft-orange);
 }
 
 .activityContent {

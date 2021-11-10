@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { GlobalContext } from '../GlobalContext';
 import styles from './Person.module.css';
 
 const Person = () => {
   const [active, setActive] = useState(null);
   const [defaultActive, setDefaultActive] = useState(true);
+  const { setFilter } = useContext(GlobalContext);
 
   function handleClick(item) {
     setActive(item);
+    setFilter(item);
     setDefaultActive(false);
   }
 
@@ -20,9 +23,9 @@ const Person = () => {
         </div>
       </div>
       <ul className={styles.personNav}>
-        <li className={defaultActive ? styles.active : (active === 'd' ? styles.active : undefined)} onClick={() => handleClick('d')}>Daily</li>
-        <li className={active === 'w' ? styles.active : undefined} onClick={() => handleClick('w')}>Weekly</li>
-        <li className={active === 'm' ? styles.active : undefined} onClick={() => handleClick('m')}>Monthly</li>
+        <li className={defaultActive ? styles.active : (active === 'daily' ? styles.active : undefined)} onClick={() => handleClick('daily')}>Daily</li>
+        <li className={active === 'weekly' ? styles.active : undefined} onClick={() => handleClick('weekly')}>Weekly</li>
+        <li className={active === 'monthly' ? styles.active : undefined} onClick={() => handleClick('monthly')}>Monthly</li>
       </ul>
     </div>
   );
