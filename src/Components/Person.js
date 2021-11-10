@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import styles from './Person.module.css';
 
 const Person = () => {
-  const [active, setActive] = useState(null)
+  const [active, setActive] = useState(null);
+  const [defaultActive, setDefaultActive] = useState(true);
 
   function handleClick(item) {
     setActive(item);
+    setDefaultActive(false);
   }
 
   return (
@@ -18,7 +20,7 @@ const Person = () => {
         </div>
       </div>
       <ul className={styles.personNav}>
-        <li className={active === 'd' ? styles.active : false} onClick={() => handleClick('d')}>Daily</li>
+        <li className={defaultActive ? styles.active : (active === 'd' ? styles.active : false)} onClick={() => handleClick('d')}>Daily</li>
         <li className={active === 'w' ? styles.active : false} onClick={() => handleClick('w')}>Weekly</li>
         <li className={active === 'm' ? styles.active : false} onClick={() => handleClick('m')}>Monthly</li>
       </ul>

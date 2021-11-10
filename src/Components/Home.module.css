@@ -4,3 +4,10 @@
   flex-direction: column;
   width: 90vw;
 }
+
+.activities {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 64px;
+}

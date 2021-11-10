@@ -1,0 +1,48 @@
+.activity {
+  position: relative;
+}
+
+.activity > img {
+  position: absolute;
+  top: 0;
+  right: 24px;
+  z-index: 0;
+}
+
+.work {
+  background-color: var(--primary-light-red-a);
+  border-radius: 12px;
+  padding-top: 48px;
+}
+
+.activityContent {
+  background-color: var(--neutral-dark-blue);
+  border-radius: 10px;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  position: relative;
+}
+
+.now > span {
+  display: block;
+  font-weight: 300;
+  font-size: 36px;
+}
+
+.now > span:first-of-type{
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.old > img {
+  margin-left: auto;
+  margin-bottom: 32px;
+}
+
+.old > span {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
