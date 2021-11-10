@@ -7,7 +7,9 @@ const Home = () => {
   return (
     <div className={styles.container}>
       <Person />
-      <Activity />
+      <div className={styles.activities}>
+        <Activity />
+      </div>
     </div>
   );
 };
