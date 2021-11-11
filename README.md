@@ -51,7 +51,7 @@ With this challenge, I managed to fix some concepts of reusing components using 
 ## Author
 
 - Website - [Daniel Mafra](https://danielmafra.github.io)
-- Frontend Mentor - [@ydanielmafra](hhttps://www.frontendmentor.io/profile/DanielMafra)
+- Frontend Mentor - [@danielmafra](https://www.frontendmentor.io/profile/DanielMafra)
 - LinkedIn - [@danielmafradev](https://linkedin.com/in/danielmafradev)
 - Instagram - [@danielmafradev](https://instagram.com/danielmafradev)
 
