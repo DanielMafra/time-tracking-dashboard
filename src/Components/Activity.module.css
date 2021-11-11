@@ -45,6 +45,10 @@
   position: relative;
 }
 
+.activityContent:hover{
+  background-color: #34397b;
+}
+
 .now > span {
   display: block;
   font-weight: 300;
@@ -57,12 +61,36 @@
   margin-bottom: 8px;
 }
 
-.old > img {
-  margin-left: auto;
-  margin-bottom: 32px;
+.activityContent > img {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.old {
+  align-self: flex-end;
 }
 
 .old > span {
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
+}
+
+@media (min-width: 900px){
+  .activity{
+    height: 90%;
+  }
+
+  .activityContent {
+    flex-direction: column;
+  }
+
+  .old {
+    align-self: flex-start;
+    margin-top: 8px;
+  }
+
+  .now > span:first-of-type{
+    margin-bottom: 24px;
+  }
 }

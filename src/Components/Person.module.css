@@ -41,6 +41,44 @@
   color: var(--neutral-desaturated-blue);
 }
 
+.personNav > li:hover{
+  color: #fff;
+}
+
 .active {
   color: #fff !important;
+}
+
+@media (min-width: 900px){
+  .person {
+    max-width: 266px;
+    height: 100%;
+    margin-right: 32px;
+  }
+
+  .personHeader {
+    align-items: initial;
+    flex-direction: column;
+  }
+
+  .personHeader > img {
+    margin-bottom: 32px;
+  }
+
+  .personTitle > h4 {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+
+  .personNav {
+    flex-direction: column;
+  }
+
+  .personNav > li {
+    margin-bottom: 24px;
+  }
+
+  .personNav > li:last-of-type{
+    margin-bottom: 0;
+  }
 }

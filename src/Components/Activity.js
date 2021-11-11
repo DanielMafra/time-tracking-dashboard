@@ -9,12 +9,13 @@ const Activity = ({ title, currentTime, previousTime }) => {
     <div className={`${styles.activity} ${styles[title.toLowerCase().replace(" ", "")]}`}>
       <img src={`./Assets/icon-${title.toLowerCase().replace(" ", "-")}.svg`} alt="" />
       <div className={styles.activityContent}>
+        <img src="./Assets/icon-ellipsis.svg" alt="Options" />
         <div className={styles.now}>
           <span>{title}</span>
           <span>{currentTime}{currentTime > 1 ? "hrs" : "hr"}</span>
         </div>
         <div className={styles.old}>
-          <img src="./Assets/icon-ellipsis.svg" alt="Options" />
+
           <span>Last {type} - {previousTime}{previousTime > 1 ? "hrs" : "hr"}</span>
         </div>
       </div>
