@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import styles from './Home.module.css';
-import { GlobalContext } from '../GlobalContext';
-import Person from './Person';
-import Activity from './Activity';
+import { GlobalContext } from '../Contexts/GlobalContext';
+import Person from './Person/index';
+import Activity from './Activity/index';
 
 const Home = () => {
   const { data, filter } = useContext(GlobalContext);

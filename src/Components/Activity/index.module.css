@@ -43,6 +43,7 @@
   justify-content: space-between;
   z-index: 1;
   position: relative;
+  transition: .3s;
 }
 
 .activityContent:hover{
@@ -76,6 +77,21 @@
   font-size: 14px;
 }
 
+.animaValues {
+  animation-name: animaValues;
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animaValues {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 @media (min-width: 900px){
   .activity{
     height: 90%;
@@ -83,6 +99,7 @@
 
   .activityContent {
     flex-direction: column;
+    cursor: pointer;
   }
 
   .old {

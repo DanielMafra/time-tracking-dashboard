@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
-import { GlobalContext } from '../GlobalContext';
-import styles from './Person.module.css';
+import { GlobalContext } from '../../Contexts/GlobalContext';
+import styles from './index.module.css';
 
 const Person = () => {
   const [active, setActive] = useState(null);

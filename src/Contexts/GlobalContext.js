@@ -6,6 +6,7 @@ export const GlobalStorage = ({ children }) => {
   const [data, setData] = useState(null);
   const [filter, setFilter] = useState("daily");
   const [type, setType] = useState("daily");
+  const [animation, setAnimation] = useState(false);
 
   //this consts is just for alternate URL to fetch in localhost (development mode)
   const url = ["http://192.168.15.120:3000/api/data.json", "http://localhost:3000/api/data.json"];
@@ -32,8 +33,15 @@ export const GlobalStorage = ({ children }) => {
     }
   }, [filter]);
 
+  useEffect(() => {
+    setAnimation(true);
+    setTimeout(() => {
+      setAnimation(false);
+    }, 300);
+  }, [type]);
+
   return (
-    <GlobalContext.Provider value={{ data, filter, setFilter, type }}>
+    <GlobalContext.Provider value={{ data, filter, setFilter, type, animation }}>
       {children}
     </GlobalContext.Provider>
   );

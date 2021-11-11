@@ -29,10 +29,11 @@ img {
 body {
   background-color: var(--neutral-very-dark-blue);
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   padding: 64px 0;
+  position: relative;
 }
 
 @media (min-width: 900px){

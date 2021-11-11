@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { GlobalContext } from '../GlobalContext';
-import styles from './Activity.module.css';
+import { GlobalContext } from '../../Contexts/GlobalContext';
+import styles from './index.module.css';
 
 const Activity = ({ title, currentTime, previousTime }) => {
-  const { type } = useContext(GlobalContext);
+  const { type, animation } = useContext(GlobalContext);
 
   return (
     <div className={`${styles.activity} ${styles[title.toLowerCase().replace(" ", "")]}`}>
@@ -12,10 +12,9 @@ const Activity = ({ title, currentTime, previousTime }) => {
         <img src="./Assets/icon-ellipsis.svg" alt="Options" />
         <div className={styles.now}>
           <span>{title}</span>
-          <span>{currentTime}{currentTime > 1 ? "hrs" : "hr"}</span>
+          <span className={animation ? styles.animaValues : undefined}>{currentTime}{currentTime > 1 ? "hrs" : "hr"}</span>
         </div>
-        <div className={styles.old}>
-
+        <div className={`${styles.old} ${animation ? styles.animaValues : undefined}`}>
           <span>Last {type} - {previousTime}{previousTime > 1 ? "hrs" : "hr"}</span>
         </div>
       </div>

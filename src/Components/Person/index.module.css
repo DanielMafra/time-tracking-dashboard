@@ -41,6 +41,10 @@
   color: var(--neutral-desaturated-blue);
 }
 
+.personNav > li{
+  transition: .3s;
+}
+
 .personNav > li:hover{
   color: #fff;
 }
@@ -76,6 +80,7 @@
 
   .personNav > li {
     margin-bottom: 24px;
+    cursor: pointer;
   }
 
   .personNav > li:last-of-type{
